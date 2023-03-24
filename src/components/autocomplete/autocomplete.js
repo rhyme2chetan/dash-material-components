@@ -1,14 +1,14 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import {Autocomplete as AutoCompleteComponent} from '@mui/material/Autocomplete';
 
 /**
  * A self contained Accordion component. Build up the children using the
  * AccordionItem component.
  */
-export default function ComboBox() {
+export default function Autocomplete() {
   return (
-    <Autocomplete
+    <AutoCompleteComponent
       disablePortal
       id="combo-box-demo"
       options={top100Films}
@@ -18,7 +18,7 @@ export default function ComboBox() {
   );
 }
 
-ComboBox.propTypes = {
+Autocomplete.propTypes = {
   /**
    * The ID of this component, used to identify dash components
    * in callbacks. The ID needs to be unique across all of the

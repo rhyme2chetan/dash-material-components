@@ -1,7 +1,7 @@
 {
   "src/components/autocomplete/autocomplete.js": {
     "description": "A self contained Accordion component. Build up the children using the\nAccordionItem component.",
-    "displayName": "ComboBox",
+    "displayName": "Autocomplete",
     "methods": [],
     "props": {
       "id": {

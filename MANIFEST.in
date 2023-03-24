@@ -1,0 +1,3 @@
+include dash_material_components/_components/dash_material_components.min.js
+include dash_material_components/_components/metadata.json
+include landing-page.md

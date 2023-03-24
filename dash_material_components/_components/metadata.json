@@ -1,0 +1,17 @@
+{
+  "src/components/autocomplete/autocomplete.js": {
+    "description": "A self contained Accordion component. Build up the children using the\nAccordionItem component.",
+    "displayName": "ComboBox",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      }
+    }
+  }
+}

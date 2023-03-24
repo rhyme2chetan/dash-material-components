@@ -1,5 +1,5 @@
-from .autocomplete import autocomplete
+from .Autocomplete import Autocomplete
 
 __all__ = [
-    "autocomplete"
+    "Autocomplete"
 ]

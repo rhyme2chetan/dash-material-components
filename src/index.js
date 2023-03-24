@@ -1,2 +1,2 @@
-export {default as ComboBox} from './components/autocomplete/autocomplete';
+export {default as ComboBox} from './components/autocomplete/Autocomplete';
 

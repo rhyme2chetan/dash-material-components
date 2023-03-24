@@ -3,8 +3,8 @@ import os
 
 from dash_material_components import _components, icons, themes
 from dash_material_components._components import *  # noqa
-from dash_material_components._components import Table
-from dash_material_components._table import _generate_table_from_df
+#from dash_material_components._components import Table
+#from dash_material_components._table import _generate_table_from_df
 from dash_material_components._version import __version__
 
 __all__ = _components.__all__ + ["icons", "themes"]
@@ -34,27 +34,27 @@ for _component_name in _components.__all__:
     _component._css_dist = _css_dist
 
 
-Table.from_dataframe = classmethod(_generate_table_from_df)
+#Table.from_dataframe = classmethod(_generate_table_from_df)
 
 
-def __getattr__(name):
-    if name in [
-        "CardColumns",
-        "CardDeck",
-        "FormGroup",
-        "InputGroupAddon",
-        "Jumbotron",
-        "ListGroupItemHeading",
-        "ListGroupItemText",
-    ]:
-        raise AttributeError(
-            f"{name} was deprecated in dash-material-components version "
-            f"1.0.0. You are using {__version__}. For more details please "
-            "see the migration guide: "
-            "https://dash-material-components.opensource.faculty.ai/"
-            "migration-guide/"
-        )
-    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+# def __getattr__(name):
+#     if name in [
+#         "CardColumns",
+#         "CardDeck",
+#         "FormGroup",
+#         "InputGroupAddon",
+#         "Jumbotron",
+#         "ListGroupItemHeading",
+#         "ListGroupItemText",
+#     ]:
+#         raise AttributeError(
+#             f"{name} was deprecated in dash-material-components version "
+#             f"1.0.0. You are using {__version__}. For more details please "
+#             "see the migration guide: "
+#             "https://dash-material-components.opensource.faculty.ai/"
+#             "migration-guide/"
+#         )
+#     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
 
 def __dir__():

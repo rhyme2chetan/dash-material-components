@@ -28,7 +28,7 @@ setup(
     name="dash-material-components",
     version=_get_version(),
     description="material themed components for use in Plotly Dash",
-    long_description="Dash version of Material UI",
+    long_description=_"Dash version of Material UI",
     long_description_content_type="text/markdown",
     license="Apache Software License",
     author="Faculty",
@@ -38,7 +38,7 @@ setup(
         "Bug Reports": os.path.join(GITHUB_URL, "issues"),
         "Source": GITHUB_URL,
     },
-    packages=["dash-material-components"],
+    packages=find_packages(),
     install_requires=["dash>=2.0.0"],
     include_package_data=True,
     classifiers=[

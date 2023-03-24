@@ -28,7 +28,7 @@ setup(
     name="dash-material-components",
     version=_get_version(),
     description="material themed components for use in Plotly Dash",
-    long_description=_"Dash version of Material UI",
+    long_description="Dash version of Material UI",
     long_description_content_type="text/markdown",
     license="Apache Software License",
     author="Faculty",

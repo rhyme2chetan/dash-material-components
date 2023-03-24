@@ -3,8 +3,8 @@
 from dash.development.base_component import Component, _explicitize_args
 
 
-class autocomplete(Component):
-    """An autocomplete component.
+class Autocomplete(Component):
+    """An Autocomplete component.
 A self contained Accordion component. Build up the children using the
 AccordionItem component.
 
@@ -17,7 +17,7 @@ Keyword arguments:
     @_explicitize_args
     def __init__(self, id=Component.UNDEFINED, **kwargs):
         self._prop_names = ['id']
-        self._type = 'autocomplete'
+        self._type = 'Autocomplete'
         self._namespace = 'dash_material_components'
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id']
@@ -30,4 +30,4 @@ Keyword arguments:
             if k not in args:
                 raise TypeError(
                     'Required argument `' + k + '` was not specified.')
-        super(autocomplete, self).__init__(**args)
+        super(Autocomplete, self).__init__(**args)

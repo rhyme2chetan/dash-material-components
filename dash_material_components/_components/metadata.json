@@ -11,6 +11,70 @@
         },
         "required": false,
         "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "options": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.oneOfType([\n  /**\n   * Array of options where the label and the value are the same thing -\n   * [string|number]\n   */\n  PropTypes.arrayOf(\n    PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n  ),\n  /**\n   * An array of options {label: [string|number], value: [string|number]},\n   * an optional disabled field can be used for each option\n   */\n  PropTypes.arrayOf(\n    PropTypes.exact({\n      /**\n       * The options's label\n       */\n      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n        .isRequired,\n\n      /**\n       * The options's id.\n       */\n      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n      .isRequired\n    })\n  )\n])"
+        },
+        "required": false,
+        "description": "Array of options."
+      },
+      "autoComplete": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the portion of the selected suggestion that has not been \ntyped by the user, known as the completion string, appears inline \nafter the input cursor in the textbox. The inline completion string \nis visually highlighted and has a selected state.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "autoHighlight": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the first option is automatically highlighted.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "autoSelect": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the selected option becomes the value of the input when \nthe Autocomplete loses focus unless the user chooses a different \noption or changes the character string in the input.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disablePortal": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the Popper content will be under the DOM hierarchy of the parent component.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "sx": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.object"
+        },
+        "required": false,
+        "description": "The system prop that allows defining system overrides as well as additional CSS styles. \nSee the https://mui.com/system/getting-started/the-sx-prop/ page for more details."
       }
     }
   }

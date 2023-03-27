@@ -77,5 +77,80 @@
         "description": "The system prop that allows defining system overrides as well as additional CSS styles. \nSee the https://mui.com/system/getting-started/the-sx-prop/ page for more details."
       }
     }
+  },
+  "src/components/inputs/Button.js": {
+    "description": "",
+    "displayName": "Button",
+    "methods": [],
+    "props": {
+      "disabled": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the component is disabled.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disableElevation": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, no elevation is used.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disableFocusRipple": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the keyboard focus ripple is disabled.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disableRipple": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the ripple effect is disabled.\nWithout a ripple there is no styling for :focus-visible by default. \nBe sure to highlight the element by applying separate styles with the .Mui-focusVisible class.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "fullWidth": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the button will take up the full width of its container.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "sx": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.object"
+        },
+        "required": false,
+        "description": "The system prop that allows defining system overrides as well as additional CSS styles. \nSee the https://mui.com/system/getting-started/the-sx-prop/ page for more details."
+      }
+    }
   }
 }

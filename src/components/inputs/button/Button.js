@@ -36,8 +36,8 @@ Button.defaultProps = {
     disableFocusRipple: false,
     disableRipple: false,
     fullWidth: false,
-    variant: text,
-    color: primary
+    variant: "text",
+    color: "primary"
   };
   
 Button.propTypes = {

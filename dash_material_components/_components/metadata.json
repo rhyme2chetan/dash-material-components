@@ -159,8 +159,8 @@
         "required": false,
         "description": "The variant to use.",
         "defaultValue": {
-          "value": "text",
-          "computed": true
+          "value": "\"text\"",
+          "computed": false
         }
       },
       "color": {
@@ -171,8 +171,8 @@
         "required": false,
         "description": "The color of the component. It supports both default and custom theme colors,\nwhich can be added as shown in the https://mui.com/material-ui/customization/palette/#adding-new-colors.",
         "defaultValue": {
-          "value": "primary",
-          "computed": true
+          "value": "\"primary\"",
+          "computed": false
         }
       }
     }

@@ -9,7 +9,7 @@ class Button(Component):
 
 Keyword arguments:
 
-- color (default primary):
+- color (default "primary"):
     The color of the component. It supports both default and custom
     theme colors, which can be added as shown in the
     https://mui.com/material-ui/customization/palette/#adding-new-colors.
@@ -38,7 +38,7 @@ Keyword arguments:
     https://mui.com/system/getting-started/the-sx-prop/ page for more
     details.
 
-- variant (default text):
+- variant (default "text"):
     The variant to use."""
     _children_props = []
     _base_nodes = ['children']

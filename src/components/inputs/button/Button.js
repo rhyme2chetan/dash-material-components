@@ -9,7 +9,9 @@ const Button = props => {
       disableFocusRipple,
       disableRipple,
       fullWidth,
-      sx
+      sx,
+      variant,
+      color
     } = props;
   
     return (
@@ -20,6 +22,8 @@ const Button = props => {
             disableRipple={disableRipple}
             fullWidth={fullWidth}
             sx={sx}
+            variant={variant}
+            color={color}
         >
             text
         </ButtonComponent>
@@ -31,7 +35,9 @@ Button.defaultProps = {
     disableElevation: false,
     disableFocusRipple: false,
     disableRipple: false,
-    fullWidth: false
+    fullWidth: false,
+    variant: text,
+    color: primary
   };
   
 Button.propTypes = {
@@ -68,6 +74,15 @@ fullWidth: PropTypes.bool,
  * See the https://mui.com/system/getting-started/the-sx-prop/ page for more details.
  */
 sx: PropTypes.object,
+
+/**	The variant to use. */
+variant: PropTypes.string,
+
+/**
+ * The color of the component. It supports both default and custom theme colors,
+ * which can be added as shown in the https://mui.com/material-ui/customization/palette/#adding-new-colors. 
+ */
+color: propTypes.string
 };
 
 export default Button;

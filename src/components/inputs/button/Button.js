@@ -82,7 +82,7 @@ variant: PropTypes.string,
  * The color of the component. It supports both default and custom theme colors,
  * which can be added as shown in the https://mui.com/material-ui/customization/palette/#adding-new-colors. 
  */
-color: propTypes.string
+color: PropTypes.string
 };
 
 export default Button;

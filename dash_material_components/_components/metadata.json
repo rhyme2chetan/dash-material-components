@@ -166,7 +166,7 @@
       "color": {
         "type": {
           "name": "custom",
-          "raw": "propTypes.string"
+          "raw": "PropTypes.string"
         },
         "required": false,
         "description": "The color of the component. It supports both default and custom theme colors,\nwhich can be added as shown in the https://mui.com/material-ui/customization/palette/#adding-new-colors.",

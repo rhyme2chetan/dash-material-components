@@ -174,6 +174,18 @@
           "value": "\"primary\"",
           "computed": false
         }
+      },
+      "btnValue": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "it shows the button text",
+        "defaultValue": {
+          "value": "\"\"",
+          "computed": false
+        }
       }
     }
   },

@@ -9,6 +9,9 @@ class Button(Component):
 
 Keyword arguments:
 
+- btnValue (default ""):
+    it shows the button text.
+
 - color (default "primary"):
     The color of the component. It supports both default and custom
     theme colors, which can be added as shown in the
@@ -45,10 +48,10 @@ Keyword arguments:
     _namespace = 'dash_material_components'
     _type = 'Button'
     @_explicitize_args
-    def __init__(self, disabled=Component.UNDEFINED, disableElevation=Component.UNDEFINED, disableFocusRipple=Component.UNDEFINED, disableRipple=Component.UNDEFINED, fullWidth=Component.UNDEFINED, sx=Component.UNDEFINED, variant=Component.UNDEFINED, color=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['color', 'disableElevation', 'disableFocusRipple', 'disableRipple', 'disabled', 'fullWidth', 'sx', 'variant']
+    def __init__(self, disabled=Component.UNDEFINED, disableElevation=Component.UNDEFINED, disableFocusRipple=Component.UNDEFINED, disableRipple=Component.UNDEFINED, fullWidth=Component.UNDEFINED, sx=Component.UNDEFINED, variant=Component.UNDEFINED, color=Component.UNDEFINED, btnValue=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['btnValue', 'color', 'disableElevation', 'disableFocusRipple', 'disableRipple', 'disabled', 'fullWidth', 'sx', 'variant']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['color', 'disableElevation', 'disableFocusRipple', 'disableRipple', 'disabled', 'fullWidth', 'sx', 'variant']
+        self.available_properties = ['btnValue', 'color', 'disableElevation', 'disableFocusRipple', 'disableRipple', 'disabled', 'fullWidth', 'sx', 'variant']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

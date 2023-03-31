@@ -43,19 +43,20 @@ Keyword arguments:
 
 - variant (default "text"):
     The variant to use."""
-    _children_props = []
-    _base_nodes = ['children']
-    _namespace = 'dash_material_components'
-    _type = 'Button'
     @_explicitize_args
     def __init__(self, disabled=Component.UNDEFINED, disableElevation=Component.UNDEFINED, disableFocusRipple=Component.UNDEFINED, disableRipple=Component.UNDEFINED, fullWidth=Component.UNDEFINED, sx=Component.UNDEFINED, variant=Component.UNDEFINED, color=Component.UNDEFINED, btnValue=Component.UNDEFINED, **kwargs):
         self._prop_names = ['btnValue', 'color', 'disableElevation', 'disableFocusRipple', 'disableRipple', 'disabled', 'fullWidth', 'sx', 'variant']
+        self._type = 'Button'
+        self._namespace = 'dash_material_components'
         self._valid_wildcard_attributes =            []
         self.available_properties = ['btnValue', 'color', 'disableElevation', 'disableFocusRipple', 'disableRipple', 'disabled', 'fullWidth', 'sx', 'variant']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
-        _locals.update(kwargs)  # For wildcard attrs and excess named props
-        args = {k: _locals[k] for k in _explicit_args}
-
+        _locals.update(kwargs)  # For wildcard attrs
+        args = {k: _locals[k] for k in _explicit_args if k != 'children'}
+        for k in []:
+            if k not in args:
+                raise TypeError(
+                    'Required argument `' + k + '` was not specified.')
         super(Button, self).__init__(**args)

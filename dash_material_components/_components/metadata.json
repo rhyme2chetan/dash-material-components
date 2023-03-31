@@ -7,7 +7,7 @@
       "id": {
         "type": {
           "name": "custom",
-          "raw": "PropTypes.string"
+          "raw": "PropTypes.string.isRequired"
         },
         "required": false,
         "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
@@ -15,7 +15,7 @@
       "options": {
         "type": {
           "name": "custom",
-          "raw": "PropTypes.oneOfType([\n  /**\n   * Array of options where the label and the value are the same thing -\n   * [string|number]\n   */\n  PropTypes.arrayOf(\n    PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n  ),\n  /**\n   * An array of options {label: [string|number], value: [string|number]},\n   * an optional disabled field can be used for each option\n   */\n  PropTypes.arrayOf(\n    PropTypes.exact({\n      /**\n       * The options's label\n       */\n      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n        .isRequired,\n\n      /**\n       * The options's id.\n       */\n      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n      .isRequired\n    })\n  )\n])"
+          "raw": "PropTypes.oneOfType([\n  /**\n   * Array of options where the label and the value are the same thing -\n   * [string|number]\n   */\n  PropTypes.arrayOf(\n    PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n  ),\n  /**\n   * An array of options {label: [string|number], value: [string|number]},\n   * an optional disabled field can be used for each option\n   */\n  PropTypes.arrayOf(\n    PropTypes.exact({\n      /**\n       * The options's label\n       */\n      label: PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n        .isRequired,\n\n      /**\n       * The options's id.\n       */\n      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])\n      .isRequired\n    })\n  )\n]).isRequired"
         },
         "required": false,
         "description": "Array of options."
@@ -56,6 +56,170 @@
           "computed": false
         }
       },
+      "blurOnSelect": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.oneOfType([\n  /**\n   * - false the input is not blurred. \n   * - true the input is always blurred. \n   */\n  PropTypes.bool,\n  /**\n   * - touch the input is blurred after a touch event. \n   * - mouse the input is blurred after a mouse event.\n   */\n  PropTypes.string\n])"
+        },
+        "required": false,
+        "description": "Control if the input should be blurred when an option is selected: \n- false the input is not blurred. \n- true the input is always blurred. \n- touch the input is blurred after a touch event. \n- mouse the input is blurred after a mouse event.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "ChipProps": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.object"
+        },
+        "required": false,
+        "description": "Props applied to the Chip (https://mui.com/material-ui/api/chip/) element."
+      },
+      "classes": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.object"
+        },
+        "required": false,
+        "description": "Override or extend the styles applied to the component. See CSS \nAPI (https://mui.com/material-ui/api/autocomplete/#css) below for more details."
+      },
+      "clearIcon": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.node"
+        },
+        "required": false,
+        "description": "The icon to display in place of the default clear icon.",
+        "defaultValue": {
+          "value": "<ClearIcon fontSize=\"small\" />",
+          "computed": false
+        }
+      },
+      "clearOnBlur": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the input's text is cleared on blur if no value is selected.\nSet to true if you want to help the user enter a new value. \nSet to false if you want to help the user resume their search."
+      },
+      "clearOnEscape": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, clear all values when the user presses escape and the popup is closed.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "clearText": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "Override the default text for the clear icon button.\nFor localization purposes, you can use the provided \ntranslations(https://mui.com/material-ui/guides/localization/).",
+        "defaultValue": {
+          "value": "'Clear'",
+          "computed": false
+        }
+      },
+      "closeText": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.string"
+        },
+        "required": false,
+        "description": "Override the default text for the close popup icon button.\nFor localization purposes, you can use the provided\ntranslations(https://mui.com/material-ui/guides/localization/).",
+        "defaultValue": {
+          "value": "'Close'",
+          "computed": false
+        }
+      },
+      "componentsProps": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.object"
+        },
+        "required": false,
+        "description": "The props used for each slot inside.\n{ clearIndicator?: object, paper?: object, popper?: object, popupIndicator?: object }",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "defaultValue": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.any"
+        },
+        "required": false,
+        "description": "The default value. Use when the component is not controlled."
+      },
+      "disableClearable": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the input can't be cleared.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disableCloseOnSelect": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the popup won't close when a value is selected.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disabled": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the component is disabled.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disabledItemsFocusable": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, will allow focus on disabled items.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disableListWrap": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the list box in the popup will not wrap focus.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
       "disablePortal": {
         "type": {
           "name": "custom",
@@ -67,6 +231,130 @@
           "value": "false",
           "computed": false
         }
+      },
+      "filterOptions": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.func"
+        },
+        "required": false,
+        "description": "A function that determines the filtered options to be rendered on search.\nSignature: function(options: Array<T>, state: object) => Array<T>\noptions: The options to render.  \nstate: The state of the component."
+      },
+      "filterSelectedOptions": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, hide the selected options from the list box.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "forcePopupIcon": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.oneOfType([\n  /**\n   * - false the input is not blurred. \n   * - true the input is always blurred. \n   */\n  PropTypes.bool,\n  /**\n   * - touch the input is blurred after a touch event. \n   * - mouse the input is blurred after a mouse event.\n   */\n  PropTypes.string\n])"
+        },
+        "required": false,
+        "description": "Force the visibility display of the popup icon.",
+        "defaultValue": {
+          "value": "'auto'",
+          "computed": false
+        }
+      },
+      "freeSolo": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the Autocomplete is free solo, meaning that the user input is not bound to provided options.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "fullWidth": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the input will take up the full width of its container.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "getLimitTagsText": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.func"
+        },
+        "required": false,
+        "description": "The label to display when the tags are truncated (limitTags).\nSignature: function(more: number) => ReactNode\nmore: The number of truncated tags."
+      },
+      "getOptionDisabled": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.func"
+        },
+        "required": false,
+        "description": "Used to determine the disabled state for a given option.\nSignature: function(option: T) => boolean\noption: The option to test."
+      },
+      "getOptionLabel": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.func"
+        },
+        "required": false,
+        "description": "Used to determine the string value for a given option. It's used to fill the input \n(and the list box options if renderOption is not provided).\nIf used in free solo mode, it must accept both the type of the options and a string.\nSignature: function(option: T) => string"
+      },
+      "groupBy": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.func"
+        },
+        "required": false,
+        "description": "If provided, the options will be grouped under the returned string. \nThe groupBy value is also used as the text for group headings when renderGroup is not provided.\nSignature: function(options: T) => string\noptions: The options to group."
+      },
+      "handleHomeEndKeys": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the component handles the \"Home\" and \"End\" keys when the popup is open. \nIt should move focus to the first option and last option, respectively."
+      },
+      "includeInputInList": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.bool"
+        },
+        "required": false,
+        "description": "If true, the highlight can move to the input.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "inputValue": {
+        "type": {
+          "name": "custom",
+          "raw": "propTypes.string"
+        },
+        "required": false,
+        "description": "The input value."
+      },
+      "isOptionEqualToValue": {
+        "type": {
+          "name": "custom",
+          "raw": "PropTypes.func"
+        },
+        "required": false,
+        "description": "Used to determine if the option represents the given value. Uses strict equality by default. \nBoth arguments need to be handled, an option can only match with one value.\nSignature: function(option: T, value: T) => boolean\noption: The option to test.\nvalue: The value to test against."
       },
       "sx": {
         "type": {
